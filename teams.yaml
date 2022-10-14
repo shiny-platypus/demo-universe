@@ -1,6 +1,0 @@
----
-org: "shiny-platypus"
-teams:
-  - name: "animals"
-    slug: "animals"
-    description: "Welcome to the zoo"
