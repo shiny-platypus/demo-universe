@@ -9,7 +9,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Create a team
 		team, err := github.NewTeam(ctx, "animals", &github.TeamArgs{
-			Description: pulumi.String("Welcome to the Zoo"),
+			Description: pulumi.String("Welcome to the zoo"),
 			Name:        pulumi.String("animals"),
 			Privacy:     pulumi.String("closed"),
 		})
