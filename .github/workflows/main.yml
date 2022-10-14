@@ -1,0 +1,32 @@
+name: Pulumi up
+on:
+  push:
+    branches:
+      - "main"
+  workflow_dispatch:
+
+env:
+  GITHUB_TOKEN: ${{ secrets.DEMO_GITHUB_TOKEN }}
+  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+  GITHUB_OWNER: shiny-platypus
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    name: Update
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+      - name: Build Binary
+        run: |
+          go mod tidy
+          go build main.go
+      - name: Pulumi update
+        uses: pulumi/actions@v3
+        with:
+          command: up
+          refresh: true
+          stack-name: guinevere/dev

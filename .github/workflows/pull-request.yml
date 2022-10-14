@@ -1,0 +1,31 @@
+name: PR preview
+on:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  GITHUB_TOKEN: ${{ secrets.DEMO_GITHUB_TOKEN }}
+  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+  GITHUB_OWNER: shiny-platypus
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    name: Preview
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+      - name: Build Binary
+        run: |
+          go mod tidy
+          go build main.go
+      - name: Pulumi Preview
+        uses: pulumi/actions@v3
+        with:
+          command: preview
+          refresh: true
+          stack-name: guinevere/dev
+          comment-on-pr: true
