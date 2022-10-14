@@ -7,33 +7,33 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create a team
-		team, err := github.NewTeam(ctx, "animals", &github.TeamArgs{
-			Description: pulumi.String("Welcome to the zoo"),
-			Name:        pulumi.String("animals"),
-			Privacy:     pulumi.String("closed"),
-		})
-
-		if err != nil {
-			return err
-		}
-		ctx.Export("team name", team.Name)
-
-		// Add members to animals team
-
-		//teamMember, err := github.NewTeamMembership(ctx, "animals", &github.TeamMembershipArgs{
+		//// Create a team
+		//team, err := github.NewTeam(ctx, "animals", &github.TeamArgs{
+		//	Description: pulumi.String("Welcome to the zoo"),
+		//	Name:        pulumi.String("animals"),
+		//	Privacy:     pulumi.String("closed"),
+		//})
+		//
+		//if err != nil {
+		//	return err
+		//}
+		//ctx.Export("team name", team.Name)
+		//
+		//// Add members to animals team
+		//
+		//teamMember, err := github.NewTeamMembership(ctx, "joe-animals", &github.TeamMembershipArgs{
 		//	TeamId:   team.ID(),
-		//	Username: pulumi.String("guineveresaenger"),
+		//	Username: pulumi.String("joeduffy"),
 		//}, pulumi.Parent(team))
 		//if err != nil {
 		//	return err
 		//}
 		//ctx.Export("team member", teamMember.Username)
-
-		// Create and initialize a repo
-
-		//testRepo, err := github.NewRepository(ctx, "test-repo", &github.RepositoryArgs{
-		//	Name:     pulumi.String("test-repo"),
+		//
+		//// Create and initialize a repo
+		//
+		//demoRepo, err := github.NewRepository(ctx, "demo-repo", &github.RepositoryArgs{
+		//	Name:     pulumi.String("demo-repo"),
 		//	AutoInit: pulumi.Bool(true),
 		//})
 		//
@@ -43,21 +43,21 @@ func main() {
 		//// Set default branch to main
 		//_, err = github.NewBranchDefault(ctx, "main", &github.BranchDefaultArgs{
 		//	Branch:     pulumi.String("main"),
-		//	Repository: testRepo.Name,
+		//	Repository: demoRepo.Name,
 		//})
 		//
 		//if err != nil {
 		//	return err
 		//}
-		//ctx.Export("reponame", testRepo.Name)
-
-		// Add repository permissions
-
+		//ctx.Export("reponame", demoRepo.Name)
+		//
+		//// Add repository permissions
+		//
 		//perm := "admin"
-		//teamRepoResourceName := "test-repo" + "-animals-" + perm
+		//teamRepoResourceName := "demo-repo" + "-animals-" + perm
 		//teamRepo, err := github.NewTeamRepository(ctx, teamRepoResourceName, &github.TeamRepositoryArgs{
 		//	Permission: pulumi.String(perm),
-		//	Repository: testRepo.Name,
+		//	Repository: demoRepo.Name,
 		//	TeamId:     team.ID(),
 		//})
 		//
@@ -65,9 +65,8 @@ func main() {
 		//	return err
 		//}
 		//ctx.Export("team repo permission", teamRepo.TeamId)
-
-		//Open PRs across a few existing repos
-
+		//
+		////Open PRs across a few existing repos
 		//
 		//managedRepos := []string{"development", "staging", "production"}
 		//for _, repo := range managedRepos {
@@ -107,7 +106,7 @@ func createPR(ctx *pulumi.Context, repoName string) error {
 		BaseRef:        pulumi.String("main"),
 		BaseRepository: pulumi.String(repoName),
 		HeadRef:        featureBranch.Branch,
-		Title:          pulumi.String("Do you wanna make a PR?"),
+		Title:          pulumi.String("Add Contributor's Guide"),
 		Body:           pulumi.String("This pull request serves to create a contributor guide on this repo."),
 	}, pulumi.Parent(contributing))
 
