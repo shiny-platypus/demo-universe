@@ -5,11 +5,6 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-type Member struct {
-	UserName string
-	Role     string
-}
-
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Create a team
@@ -71,7 +66,7 @@ func main() {
 		//}
 		//ctx.Export("team repo permission", teamRepo.TeamId)
 
-		//Open PRs across a few pre-made repos, which will trigger an Action that is also pre-set-up.
+		//Open PRs across a few existing repos
 
 		//
 		//managedRepos := []string{"development", "staging", "production"}
