@@ -1,0 +1,5 @@
+team-name: "animals"
+permissions:
+  - role: "admin"
+    repos:
+      - "development"
