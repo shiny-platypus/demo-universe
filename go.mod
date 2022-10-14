@@ -19,6 +19,7 @@ require (
 	github.com/go-git/gcfg v1.5.0 // indirect
 	github.com/go-git/go-billy/v5 v5.3.1 // indirect
 	github.com/go-git/go-git/v5 v5.4.2 // indirect
+	github.com/gofrs/flock v0.7.1 // indirect
 	github.com/gofrs/uuid v3.3.0+incompatible // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
@@ -38,12 +39,14 @@ require (
 	github.com/opentracing/opentracing-go v1.1.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/term v1.1.0 // indirect
+	github.com/pulumi/pulumi/sdk/v2 v2.0.0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rogpeppe/go-internal v1.8.1 // indirect
 	github.com/sabhiram/go-gitignore v0.0.0-20180611051255-d3107576ba94 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
 	github.com/spf13/cobra v1.4.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/src-d/gcfg v1.4.0 // indirect
 	github.com/texttheater/golang-levenshtein v0.0.0-20191208221605-eb6844b05fc6 // indirect
 	github.com/tweekmonster/luser v0.0.0-20161003172636-3fa38070dbd7 // indirect
 	github.com/uber/jaeger-client-go v2.22.1+incompatible // indirect
@@ -58,6 +61,8 @@ require (
 	google.golang.org/genproto v0.0.0-20200608115520-7c474a2e3482 // indirect
 	google.golang.org/grpc v1.29.1 // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
+	gopkg.in/src-d/go-billy.v4 v4.3.2 // indirect
+	gopkg.in/src-d/go-git.v4 v4.13.1 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	lukechampine.com/frand v1.4.2 // indirect
