@@ -1,13 +1,11 @@
-team-name: "animals"
+team-name: "unicorns"
 permissions:
   - role: "admin"
     repos:
-      - "development"
+      - "staging"
   - role: "maintain"
     repos:
   - role: "push"
     repos:
-      - "staging"
-      - "production"
   - role: "pull"
     repos:
