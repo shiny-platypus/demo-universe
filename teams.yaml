@@ -3,4 +3,4 @@ org: "shiny-platypus"
 teams:
   - name: "animals"
     slug: "animals"
-    description: "Welcome to the zoo"
+    description: "I am updating the description"
