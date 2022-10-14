@@ -1,13 +1,12 @@
-team-name: "animals"
+team-name: "platypuses"
 permissions:
   - role: "admin"
     repos:
-      - "development"
+      - "production"
+      - "demo-universe"
   - role: "maintain"
     repos:
   - role: "push"
     repos:
-      - "staging"
-      - "production"
   - role: "pull"
     repos:
