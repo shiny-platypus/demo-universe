@@ -1,0 +1,11 @@
+team-name: "unicorns"
+permissions:
+  - role: "admin"
+    repos:
+      - "staging"
+  - role: "maintain"
+    repos:
+  - role: "push"
+    repos:
+  - role: "pull"
+    repos:

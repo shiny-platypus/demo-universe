@@ -1,0 +1,30 @@
+---
+org: "shiny-platypus"
+teams:
+  - name: "animals"
+    slug: "animals"
+    description: "Welcome to the Zoo"
+    members:
+      - username: "guineveresaenger"
+        role: "maintainer"
+      - username: "joeduffy"
+      - username: "kimberleyamackenzie"
+      - username: "roothorp"
+      - username: "susanev"
+      - username: "thomas11"
+    teams:
+      - name: "platypuses"
+        slug: "platypuses"
+        description: "The team that does the demo magic"
+        members:
+          - username: "joeduffy"
+          - username: "guineveresaenger"
+            role: "maintainer"
+      - name: "unicorns"
+        slug: "unicorns"
+        description: "Swiftwind and friends"
+        members:
+          - username: "susanev"
+          - username: "thomas11"
+          - username: "kimberleyamackenzie"
+          - username: "roothorp"

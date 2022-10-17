@@ -1,0 +1,13 @@
+team-name: "animals"
+permissions:
+  - role: "admin"
+    repos:
+      - "development"
+  - role: "maintain"
+    repos:
+  - role: "push"
+    repos:
+      - "staging"
+      - "production"
+  - role: "pull"
+    repos:
