@@ -8,9 +8,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		//// Create a team
-		//team, err := github.NewTeam(ctx, "animals", &github.TeamArgs{
-		//	Description: pulumi.String("Welcome to the zoo"),
-		//	Name:        pulumi.String("animals"),
+		//team, err := github.NewTeam(ctx, "universe", &github.TeamArgs{
+		//	Description: pulumi.String("Welcome to the universe"),
+		//	Name:        pulumi.String("universe"),
 		//	Privacy:     pulumi.String("closed"),
 		//})
 		//
@@ -19,9 +19,9 @@ func main() {
 		//}
 		//ctx.Export("team name", team.Name)
 		//
-		//// Add members to animals team
+		////Add members to Universe team
 		//
-		//teamMember, err := github.NewTeamMembership(ctx, "joe-animals", &github.TeamMembershipArgs{
+		//teamMember, err := github.NewTeamMembership(ctx, "joe-universe", &github.TeamMembershipArgs{
 		//	TeamId:   team.ID(),
 		//	Username: pulumi.String("joeduffy"),
 		//}, pulumi.Parent(team))
@@ -32,8 +32,8 @@ func main() {
 		//
 		//// Create and initialize a repo
 		//
-		//demoRepo, err := github.NewRepository(ctx, "demo-repo", &github.RepositoryArgs{
-		//	Name:     pulumi.String("demo-repo"),
+		//demoRepo, err := github.NewRepository(ctx, "andromeda-galaxy", &github.RepositoryArgs{
+		//	Name:     pulumi.String("hello-universe-repo"),
 		//	AutoInit: pulumi.Bool(true),
 		//})
 		//
@@ -54,7 +54,7 @@ func main() {
 		//// Add repository permissions
 		//
 		//perm := "admin"
-		//teamRepoResourceName := "demo-repo" + "-animals-" + perm
+		//teamRepoResourceName := "andromeda-galaxy" + "-universe-" + perm
 		//teamRepo, err := github.NewTeamRepository(ctx, teamRepoResourceName, &github.TeamRepositoryArgs{
 		//	Permission: pulumi.String(perm),
 		//	Repository: demoRepo.Name,
@@ -65,9 +65,9 @@ func main() {
 		//	return err
 		//}
 		//ctx.Export("team repo permission", teamRepo.TeamId)
-		//
-		////Open PRs across a few existing repos
-		//
+
+		//Open PRs across a few existing repos
+
 		//managedRepos := []string{"development", "staging", "production"}
 		//for _, repo := range managedRepos {
 		//	err = createPR(ctx, repo)
