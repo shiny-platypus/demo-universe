@@ -20,6 +20,8 @@ teams:
           - username: "joeduffy"
           - username: "guineveresaenger"
             role: "maintainer"
+          - username: "susanev"
+          - username: "thomas11"
       - name: "unicorns"
         slug: "unicorns"
         description: "Swiftwind and friends"
